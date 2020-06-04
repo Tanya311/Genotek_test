@@ -1,0 +1,21 @@
+$font-primary: "ALSStory", "Arial", sans-serif;
+
+$color-primary: #111111;
+$color-secondary: #ffffff;
+$color-grey: #6d7278;
+
+$bg-body: #f4f4f6;
+$bg-primary: #ffffff;
+$bg-secondary: #142536;
+$bg-hover: #22374b;
+
+
+$desktop-width: 1400px;
+
+
+@mixin width-block($width) {
+  width: $width;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}

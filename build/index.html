@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genotek Test</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="page-conteiner">
+      <header class="page-header">
+        <p class="page-header__company">GENOTEK</p>
+        <p class="page-header__time">час назад</p>
+        <p class="page-header__week">неделю назад</p>
+        <svg  width="16px" height="16px"><use xlink:href="img/sprite.svg#icon-user"></use></svg>
+        <p  class="page-header__access">доступно только мне</p>
+      </header>
+      <main class="page-main">
+        <h1 class="page-main__title">Подарочный набор для сдачи ДНК-теста доставлен</h1>
+        <p class="page-main__text">Спасибо, что выбрали Genotek! На упаковке вы найдете подробную инструкцию как сдать ДНК-тест.</p>
+        <img class="page-main__image" src="img/rectangle-copy-25.jpg" srcset="img/rectangle-copy-25@2x.jpg 2x, img/rectangle-copy-25@3x.jpg 3x" alt="Фотография подарка" width="375" height="200">
+        <section class="faq">
+          <h2 class="visually-hidden">Вопросы</h2>
+          <div class="faq__question-first">
+            <p class="faq__question-text">Как подарить набор другу, чтобы он создал свой личный кабинет?</p>
+            <svg class="faq__arrow" width="18px" height="10px"><use xlink:href="img/sprite.svg#icon-arrow-bottom"></use></svg>
+          </div>
+          <div class="faq__answer faq__answer--gift">
+            <div class="faq__answer-text">
+              <p>Все просто! На подарочной упаковке ДНК-теста указан временный логин и пароль, 
+                 который защищен стираемой полосой.
+              </p>
+              <p>Человеку, который получил ДНК-тест в подарок, нужно ввести временный логин и пароль на странице входа в личный кабинет <a href="lk.genotek.ru.">lk.genotek.ru.</a>
+                  После этого ему будет предложено зарегистрироваться или указать данные уже зарегистрированного пользователя, ввести номер пробирки 
+                  и вызвать курьера для доставки биоматериала в лабораторию.
+              </p> 
+              <p>Обратите внимание, что по умолчанию вы не получите доступ к результатам ДНК-теста того, кому вы подарили тест. 
+                  Но вы можете попросить вашего близкого поделиться с вами результатами в его настройках профиля.
+              </p>
+            </div>
+            <div class="faq__answer-img-wrapper">
+              <img class="faq__answer-img" src="img/box-personal-copy-3.png" srcset="img/box-personal-copy-3@2x.jpg 2x, img/box-personal-copy-3@3x.jpg 3x" alt="" width="250" height="250">
+            </div>
+          </div>
+          <div class="faq__question-second">
+            <p  class="faq__question-text">Хочу активировать ДНК-тест в этом личном кабинете</p>
+            <svg class="faq__arrow" width="18px" height="10px"><use xlink:href="img/sprite.svg#icon-arrow-bottom"></use></svg>
+          </div>
+          <div class="faq__answer faq__answer--authorization">
+            <div class="faq__answer-text">
+              <p>На подарочной упаковке ДНК-теста указан временный логин и пароль, который защищен стираемой полосой. 
+                  Пожалуйста, введите их ниже. После ввода временных данных, вы сможете ввести номер пробирки 
+                  и вызвать курьера для доставки биоматериала в лабораторию. 
+              </p>
+            </div>
+            <div class="faq__answer-img-wrapper">
+              <img class="faq__answer-img" src="img/box-personal-copy-3.png" srcset="img/box-personal-copy-3@2x.jpg 2x, img/box-personal-copy-3@3x.jpg 3x" alt="" width="250" height="250">
+            </div>
+            <form class="faq__form form" method="post">
+              <ul class="form__list">
+                <li class="form__item">
+                  <label class="form__label" for="login">Логин</label>
+                  <input class="form__input" type="text" name="login" id="login">
+                </li>
+                <li class="form__item">
+                  <label class="form__label" for="password">Пароль</label>
+                  <input class="form__input" type="text" name="password" id="password">
+                </li>
+              </ul>
+              <button class="form__btn" type="button">Активировать ДНК-тест</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/svg4everybody.legacy.min.js"></script>
+    <script>
+      svg4everybody();
+    </script>
+    <script src="js/picturefill.min.js"></script>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+body {
+    min-width: 375px;
+    margin: 0;
+    padding: 0;
+    font-family: $font-primary;
+    font-size: 14px;
+    font-weight: normal;
+    color: $color-primary;
+    text-align: left;
+    line-height: 1.29;
+    background-color: $bg-body;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .page-conteiner {
+    @include width-block(375px);
+    box-shadow: 0 4px 26px 0 #e1e1e1;
+    background-color: $bg-primary;
+  } 
+
+@media (min-width: $desktop-width) {
+  .page-conteiner {
+    @include width-block(1300px);
+    border-radius: 8px;
+    box-shadow: 0 4px 26px 0 #e1e1e1;
+    background-color: $bg-primary;
+  }
+}

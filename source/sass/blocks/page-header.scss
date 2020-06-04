@@ -1,0 +1,39 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  padding: 30px 15px 10px;
+  color: $color-grey;
+}
+
+.page-header__company {
+  margin: 0;
+}
+
+.page-header__week,
+.page-header__access {
+  display: none;
+}
+
+.page-header__time {
+    margin: 0 15px;
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    padding: 31px 45px 10px;
+  }
+  
+  .page-header__access {
+    display: block;
+    margin-left: 8px;
+  }
+
+  .page-header__week {
+    display: block;
+    margin: 0 15px;
+  }
+    
+  .page-header__time {
+    display: none;
+  }
+}
