@@ -3,10 +3,8 @@
   margin-top: -4px;
 }
 
-.faq__question-first,
-.faq__question-second {
-  display: flex;
-  align-items: center;
+.faq__question {
+
   padding: 15px 58px 14px 15px;
   font-size: 22px;
   line-height: 1.27;
@@ -15,17 +13,15 @@
   position: relative;
   cursor: pointer;
 
-  &:hover {
-    background-color: $bg-hover;
+  &--second {
+    border-top: 1px solid #405265;
   }
-}
 
-.faq__question-text {
-  margin: 0;
-}
-
-.faq__question-second {
-  border-top: 1px solid #405265;
+  &:hover,
+  &:focus {
+    background-color: $bg-hover;
+    outline: none;
+  }
 }
 
 .faq__arrow {
@@ -33,18 +29,16 @@
   right: 15px;
 }
 
-.faq__question-first--open > .faq__arrow,
-.faq__question-second--open > .faq__arrow {
+.faq__question--open > .faq__arrow,
+.faq__question--open > .faq__arrow {
   transform: rotate(180deg);
 }
 
-.faq__question-first ~ .faq__answer--gift,
-.faq__question-second ~ .faq__answer--authorization {
+.faq__question + .faq__answer {
   display: none;
 }
 
-.faq__question-first--open ~ .faq__answer--gift,
-.faq__question-second--open ~ .faq__answer--authorization {
+.faq__question--open + .faq__answer {
   @include width-block(344px);
   display: block;
   padding: 15px 0 29px;
@@ -69,8 +63,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .faq__question-first,
-  .faq__question-second {
+  .faq__question {
     padding: 35px 45px;
   }
 
@@ -78,8 +71,7 @@
     right: 45px;
   }
 
-  .faq__question-first--open ~ .faq__answer--gift,
-  .faq__question-second--open ~ .faq__answer--authorization  {
+  .faq__question--open + .faq__answer {
     display: grid;
     grid-template-columns: 2.8fr 5.2fr 4fr;
     grid-template-areas: 

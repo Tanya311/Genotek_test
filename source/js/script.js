@@ -2,42 +2,27 @@
 // Файл script.js
 "use strict";
 (function () {
-  var buttonsAnswerFirstOpen = document.querySelector(".faq__question-first");
-  var buttonsAnswerSecondtOpen = document.querySelector(".faq__question-second");
-
-  /**
-   * @name openAnswerFirst
-   * @description функция переключения класса faq__question-first--open
-   */
-  var openAnswerFirst = function () {
-    buttonsAnswerFirstOpen.classList.toggle("faq__question-first--open");
-  };
-
+  var faq = document.querySelector(".faq");
+ 
    /**
    * @name openAnswerSecond
    * @description функция переключения класса faq__question-second--open
    */
-  var openAnswerSecond = function () {
-    buttonsAnswerSecondtOpen.classList.toggle("faq__question-second--open");
+  var openAnswer = function (evt) {
+    evt.target.classList.toggle("faq__question--open");
   };
 
-  /**
-   * @name buttonsAnswerFirstOpenClickHandler
-   * @description функция обработчик при нажатии на buttonsAnswerFirstOpen
-   */
-  var buttonsAnswerFirstOpenClickHandler = function () {
-    openAnswerFirst();
-  };
 
   /**
    * @name buttonsAnswerSecondtOpenClickHandler
-   * @description функция обработчик при нажатии на buttonsAnswerSecondtOpen
+   * @description функция обработчик при нажатии на buttonsAnswerOpenClickHandler
    */
-  var buttonsAnswerSecondtOpenClickHandler = function () {
-    openAnswerSecond();
+  var buttonsAnswerOpenClickHandler = function (evt) {
+    if(evt.target.classList.contains("faq__question")) {
+      openAnswer(evt);
+    }
   };
 
-  buttonsAnswerFirstOpen.addEventListener("click", buttonsAnswerFirstOpenClickHandler);
-  buttonsAnswerSecondtOpen.addEventListener("click", buttonsAnswerSecondtOpenClickHandler);
-  
+
+  faq.addEventListener("click", buttonsAnswerOpenClickHandler);
 })();
